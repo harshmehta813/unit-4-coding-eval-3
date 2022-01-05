@@ -7,7 +7,7 @@ import Repos from "./Repos";
 import { useState } from "react";
 import { Redirect } from "react-router-dom";
 
-function Search() {
+function Repo() {
   const [page, setPage] = useState(1);
   const [perPageInput, setPerPageInput] = useState(1);
   const [perPage, setPerPage] = useState(5);
@@ -54,4 +54,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default Repo;

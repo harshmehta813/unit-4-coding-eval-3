@@ -2,3 +2,32 @@
   font-family: sans-serif;
   text-align: center;
 }
+.input {
+  display: flex;
+  gap: 2rem;
+  margin: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.repo_card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+}
+.topics {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+.topics > button {
+  border-radius: 2rem;
+}
+.repo_details {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}

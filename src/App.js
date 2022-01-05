@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Login from "./Components/Login";
 import Search from "./Components/Search";
+import Home from "./Components/Home";
 import { useSelector } from "react-redux";
 
 export default function App() {
@@ -13,9 +14,12 @@ export default function App() {
       <Route exact path="/search">
         <Search />
       </Route>
+      <Route path="/home">
+        <Home />
+      </Route>
     </div>
   ) : (
-    <Route exact path="/login">
+    <Route path="/login">
       <Login />
     </Route>
   );
