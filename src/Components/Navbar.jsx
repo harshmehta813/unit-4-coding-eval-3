@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 
-const pages = ["Search"];
+const pages = ["Search", "Login"];
 
 const NavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -66,11 +66,12 @@ const NavBar = () => {
                 display: { xs: "block", md: "none" }
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Link to="/search">Search</Link>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Link to="/Login">Login</Link>
+              </MenuItem>
             </Menu>
           </Box>
           <Typography
@@ -82,15 +83,12 @@ const NavBar = () => {
             GitHub
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Link to="/search">Search</Link>
+            </MenuItem>
+            <MenuItem onClick={handleCloseNavMenu}>
+              <Link to="/Login">Login</Link>
+            </MenuItem>
           </Box>
         </Toolbar>
       </Container>
