@@ -40,9 +40,17 @@ function PrintRepo({ allFunc }) {
               padding: "20px"
             }}
           >
-            {console.log(i.topics)}
-            <Avatar src={i.owner.avatar_url} sx={{ width: 56, height: 56 }} />
-            <p>ID : {i.id}</p>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "0.5rem"
+              }}
+            >
+              <Avatar src={i.owner.avatar_url} sx={{ width: 56, height: 56 }} />
+              ID : {i.id}
+            </div>
             <p>Repository Name : {i.full_name}</p>
             <p>Description : {i.description}</p>
             <div className="topics">

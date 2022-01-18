@@ -19,8 +19,10 @@ export default function App() {
       </Route>
     </div>
   ) : (
-    <Route path="/login">
-      <Login />
+    <Route path="/">
+      <div className="App">
+        <Login />
+      </div>
     </Route>
   );
 }

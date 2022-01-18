@@ -5,7 +5,15 @@ function Pagination({ total, currentPage, onClickCallback }) {
         {index + 1}
       </button>
     ) : (
-      <button key={index} onClick={() => onClickCallback(index + 1)}>
+      <button
+        style={{
+          margin: "5px",
+          borderRadius: "0.25rem",
+          backgroundColor: "white"
+        }}
+        key={index}
+        onClick={() => onClickCallback(index + 1)}
+      >
         {" "}
         {index + 1}
       </button>
